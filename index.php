@@ -41,7 +41,7 @@
                                 <td><?= $k['surname_ct']; ?></td>
                                 <td><?= $k['phone_ct']; ?></td>
                                 <td><a href="#" class="btn btn-info btn-sm">รายละเอียด</a></td>
-                                <td><a href="formedit.php" class="btn btn-warning btn-sm">แก้ไข</a></td>
+                                <td><a href="formedit.php?customer_id=<?php echo  $k['customer_id'];?>" class="btn btn-warning btn-sm">แก้ไข</a></td>
                                 <td><a href="#" class="btn btn-danger btn-sm">ลบ</a></td>
                                 <!-- <td><a href="formEdit.php?id=<?= $k['id']; ?>" class="btn btn-warning btn-sm">แก้ไข</a></td>
                                 <td><a href="del.php?id=<?= $k['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('ยืนยันการลบข้อมูล !!');">ลบ</a></td> -->
