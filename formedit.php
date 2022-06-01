@@ -37,19 +37,19 @@ $row1 = $stmt->fetch();
           <div class="mb-2">
             <label for="phone_ct" class="col-sm-2 col-form-label"> เบอร์โทร:</label>
             <div class="col-sm-10">
-              <input type="text" name="phone_ct" class="form-control">
+              <input class="form-control" type="text" name="phone_ct" id="phone_ct" value="<?=$row1['phone_ct']?>" >
             </div>
           </div>
           <div class="mb-2">
             <label for="email_ct" class="col-sm-2 col-form-label"> อีเมล:</label>
             <div class="col-sm-10">
-              <input type="text" name="email_ct" class="form-control">
+              <input class="form-control" type="text" name="email_ct" id="email_ct" value="<?=$row1['email_ct']?>" >
             </div>
           </div>
           <div class="mb-2">
             <label for="adress_ct" class="col-sm-2 col-form-label"> ที่อยู่:</label>
             <div class="col-sm-10">
-              <input type="text" name="adress_ct" class="form-control">
+              <input class="form-control" type="text" name="adress_ct" id="adress_ct" value="<?=$row1['adress_ct']?>">
             </div>
           </div>
           <button type="submit" class="btn btn-success">แก้ไขข้อมูล</button>

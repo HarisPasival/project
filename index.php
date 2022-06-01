@@ -29,7 +29,7 @@
                     <tbody>
                         <?php
                         //คิวรี่ข้อมูลมาแสดงในตาราง
-                        require_once 'config/connect_db.php';
+                        require 'config/connect_db.php';
                         $sql = "SELECT*FROM customer";
                         $stmt = $conn->query($sql);
                         while ($row = $stmt->fetch()) {
@@ -42,8 +42,6 @@
                                 <td><a href="#" class="btn btn-info btn-sm">รายละเอียด</a></td>
                                 <td><a href="formedit.php?customer_id=<?php echo  $row['customer_id']; ?>" class="btn btn-warning btn-sm">แก้ไข</a></td>
                                 <td><a href="#" class="btn btn-danger btn-sm">ลบ</a></td>
-                                <!-- <td><a href="formEdit.php?id=<?= $k['id']; ?>" class="btn btn-warning btn-sm">แก้ไข</a></td>
-                                <td><a href="del.php?id=<?= $k['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('ยืนยันการลบข้อมูล !!');">ลบ</a></td> -->
                             </tr>
                         <?php } ?>
                     </tbody>
