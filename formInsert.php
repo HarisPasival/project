@@ -18,31 +18,31 @@
                     <div class="mb-2">
                         <label for="name_ct" class="col-sm-2 col-form-label"> ชื่อ:</label>
                         <div class="col-sm-10">
-                            <input type="text" name="name_ct" class="form-control" required placeholder="ชื่อ">
+                            <input type="text" name="name_ct" class="form-control" id="name_ct" required placeholder="ชื่อ">
                         </div>
                     </div>
                     <div class="mb-2">
                         <label for="surname_ct" class="col-sm-2 col-form-label"> นามสกุล:</label>
                         <div class="col-sm-10">
-                            <input type="text" name="surname_ct" class="form-control" required placeholder="นามสกุล">
+                            <input type="text" name="surname_ct" class="form-control" id="surname" required placeholder="นามสกุล">
                         </div>
                     </div>
                     <div class="mb-2">
                         <label for="phone_ct" class="col-sm-2 col-form-label"> เบอร์โทร:</label>
                         <div class="col-sm-10">
-                            <input type="text" name="phone_ct" class="form-control" required placeholder="เบอร์โทร">
+                            <input type="text" name="phone_ct" class="form-control" id="phone_ct" required placeholder="เบอร์โทร">
                         </div>
                     </div>
                     <div class="mb-2">
                         <label for="email_ct" class="col-sm-2 col-form-label"> อีเมล:</label>
                         <div class="col-sm-10">
-                            <input type="text" name="email_ct" class="form-control" required placeholder="อีเมล">
+                            <input type="text" name="email_ct" class="form-control" id="email_ct" required placeholder="อีเมล">
                         </div>
                     </div>
                     <div class="mb-2">
                         <label for="adress_ct" class="col-sm-2 col-form-label"> ที่อยู่:</label>
                         <div class="col-sm-10">
-                            <input type="text" name="adress_ct" class="form-control" required placeholder="ที่อยู่">
+                            <input type="text" name="adress_ct" class="form-control" id="adress_ct" required placeholder="ที่อยู่">
                         </div>
                     </div>
                     <button type="submit" class="btn btn-success">เพิ่มข้อมูล</button>

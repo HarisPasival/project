@@ -21,7 +21,7 @@
                             <th width="25%">ชื่อ</th>
                             <th width="25%">นามสกุล</th>
                             <th width="25%">เบอร์โทร</th>
-                            <th width="10%">รายละเอียด</th>
+                            <th width="8%">รายละเอียด</th>
                             <th width="5%">แก้ไข</th>
                             <th width="5%">ลบ</th>
                         </tr>
@@ -30,18 +30,17 @@
                         <?php
                         //คิวรี่ข้อมูลมาแสดงในตาราง
                         require_once 'config/connect_db.php';
-                        $stmt = $conn->prepare("SELECT * FROM customer");
-                        $stmt->execute();
-                        $result = $stmt->fetchAll();
-                        foreach ($result as $k) {
+                        $sql = "SELECT*FROM customer";
+                        $stmt = $conn->query($sql);
+                        while ($row = $stmt->fetch()) {
                         ?>
                             <tr>
-                                <td><?= $k['customer_id']; ?></td>
-                                <td><?= $k['name_ct']; ?></td>
-                                <td><?= $k['surname_ct']; ?></td>
-                                <td><?= $k['phone_ct']; ?></td>
+                                <td><?= $row['customer_id']; ?></td>
+                                <td><?= $row['name_ct']; ?></td>
+                                <td><?= $row['surname_ct']; ?></td>
+                                <td><?= $row['phone_ct']; ?></td>
                                 <td><a href="#" class="btn btn-info btn-sm">รายละเอียด</a></td>
-                                <td><a href="formedit.php?customer_id=<?php echo  $k['customer_id'];?>" class="btn btn-warning btn-sm">แก้ไข</a></td>
+                                <td><a href="formedit.php?customer_id=<?php echo  $row['customer_id']; ?>" class="btn btn-warning btn-sm">แก้ไข</a></td>
                                 <td><a href="#" class="btn btn-danger btn-sm">ลบ</a></td>
                                 <!-- <td><a href="formEdit.php?id=<?= $k['id']; ?>" class="btn btn-warning btn-sm">แก้ไข</a></td>
                                 <td><a href="del.php?id=<?= $k['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('ยืนยันการลบข้อมูล !!');">ลบ</a></td> -->
